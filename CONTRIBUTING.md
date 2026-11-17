@@ -65,3 +65,11 @@ Conventional Commits: `feat(engine): pause on fullscreen`, `fix(settings): keep 
 ## License
 
 By contributing you agree that your work is licensed under the MIT license of this project (see [LICENSE](LICENSE)), and that you have the right to submit it.
+
+## Release checklist
+
+1. Bump the version in `package.json`, `src-tauri/Cargo.toml` and `src-tauri/tauri.conf.json`.
+2. Update the direct download links in `docs/index.html` and `docs/es/index.html` (they point at the tagged release assets).
+3. Run `npm run tauri build` and attach the NSIS and MSI bundles to the GitHub release.
+4. Publish the SHA-256 hashes of both assets in the release notes.
+5. Update `CHANGELOG.md`.

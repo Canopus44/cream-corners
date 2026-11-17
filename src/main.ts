@@ -547,6 +547,14 @@ function createSheet(): SheetHandle {
 
 const sheet = createSheet();
 
+function openExternal(url: string): void {
+  if (PREVIEW) {
+    window.open(url, "_blank", "noopener");
+    return;
+  }
+  void bridge.runAction({ type: "url", url }).catch((error) => toast(messageOf(error), "error"));
+}
+
 /* ------------------------------------------------------------------ */
 /* Saving                                                              */
 /* ------------------------------------------------------------------ */
@@ -1300,6 +1308,15 @@ function aboutPane(): HTMLElement {
     appMark(64),
     el("h2", { class: "about__name" }, "Cream Corners"),
     el("p", { class: "about__version" }, `Versión ${appVersion}`),
+    el("p", { class: "about__author" },
+      "Creado por ",
+      el("a", {
+        href: "https://github.com/Canopus44",
+        target: "_blank",
+        rel: "noreferrer noopener",
+        onClick: (event: Event) => { event.preventDefault(); openExternal("https://github.com/Canopus44"); },
+      }, "Canopus44"),
+    ),
     el("p", { class: "about__desc" },
       "Zonas activas para Windows 10 y 11. Al llevar el cursor a una esquina o borde de la pantalla, " +
       "Cream Corners ejecuta la acción que elijas, con demora y enfriamiento configurables.",
@@ -1331,10 +1348,14 @@ function aboutPane(): HTMLElement {
   ));
 
   const footer = el("footer", { class: "about-footer" },
-    el("span", {}, "Licencia MIT"),
-    el("span", {},
-      "Inspirado en ",
-      el("a", { href: "https://github.com/flexits/HotCornersWin", target: "_blank", rel: "noreferrer noopener" }, "HotCornersWin"),
+    el("span", {}, "\u00a9 2026 Canopus44 \u00b7 Licencia MIT"),
+    el("span", {}, "Inspirado en ",
+      el("a", {
+        href: "https://github.com/flexits/HotCornersWin",
+        target: "_blank",
+        rel: "noreferrer noopener",
+        onClick: (event: Event) => { event.preventDefault(); openExternal("https://github.com/flexits/HotCornersWin"); },
+      }, "HotCornersWin"),
     ),
   );
 

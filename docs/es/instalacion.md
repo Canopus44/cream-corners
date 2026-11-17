@@ -187,3 +187,7 @@ Get-FileHash ".\Cream Corners_0.1.0_x64-setup.exe" -Algorithm SHA256
 ```
 
 Compara el valor obtenido con el del release. Si no coincide, vuelve a descargar el archivo antes de ejecutarlo.
+
+---
+
+Cream Corners está creado y mantenido por [Canopus44](https://github.com/Canopus44).

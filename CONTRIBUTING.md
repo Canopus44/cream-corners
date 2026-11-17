@@ -1,5 +1,7 @@
 # Contributing
 
+Cream Corners is created and maintained by [Canopus44](https://github.com/Canopus44).
+
 Thanks for helping. Cream Corners is a small Tauri app, so the fastest contribution path is a focused issue or a small pull request.
 
 ## Project layout

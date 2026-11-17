@@ -107,3 +107,7 @@ Remove-ItemProperty "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run" -Name 
 ```
 
 If the tray icon stays visible after uninstalling, restart Explorer from Task Manager (right click **Windows Explorer** → **Restart**) or sign out and back in.
+
+---
+
+Cream Corners is created and maintained by [Canopus44](https://github.com/Canopus44).

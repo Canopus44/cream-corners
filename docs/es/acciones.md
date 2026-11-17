@@ -65,3 +65,7 @@ Una URL vacía o de otro esquema se descarta y la acción queda en `{"type":"non
 - Un comando se ejecuta con los privilegios de la app, sin confirmación. No importes configuraciones de fuentes no confiables: revisa `program`, `args` y `url` antes de usarlas.
 - `shell:` y `ms-` pueden abrir rutas y paneles del sistema. Trátalos como entrada sensible.
 - Las teclas de los presets son sintéticas: si una ventana en primer plano es elevada (UIPI), puede ignorarlas. Ejecutar Cream Corners como administrador reduce el problema.
+
+---
+
+Cream Corners está creado y mantenido por [Canopus44](https://github.com/Canopus44).

@@ -70,3 +70,7 @@ No hay registro a archivo. Los mensajes de diagnóstico salen por `eprintln!` a 
 ```
 
 Ajusta la ruta al binario instalado: `C:\Program Files\Cream Corners\` con los instaladores per-machine, o `%LOCALAPPDATA%\Programs\Cream Corners\` si copiaste el exe a mano. Ejecutar desde PowerShell deja ver los errores que la UI reporta como `action-error`. En desarrollo, `npm run tauri dev` muestra esa salida en la misma consola.
+
+---
+
+Cream Corners está creado y mantenido por [Canopus44](https://github.com/Canopus44).

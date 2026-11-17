@@ -4,12 +4,14 @@
 
 Hot corners for Windows 10 and 11: park the cursor in a screen corner or on a screen edge and an action fires — Task View, show desktop, lock the PC, open a URL, launch a program. Windows has no configurable mouse hot corners, so this app adds them, free under the MIT license. Rust + Tauri 2, a framework-free TypeScript UI, and every zone configurable down to its own dwell time.
 
-Website: https://canopus44.github.io/cream-corners/
+Website: https://canopus44.github.io/cream-corners/  
+Created and maintained by [Canopus44](https://github.com/Canopus44).
 
 [![Rust](https://img.shields.io/badge/Rust-2021-orange?logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![Tauri](https://img.shields.io/badge/Tauri-2-24C8D8?logo=tauri&logoColor=white)](https://tauri.app/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6)](#limitations)
+[![Made by Canopus44](https://img.shields.io/badge/made%20by-Canopus44-C98A4B)](https://github.com/Canopus44)
 
 [English](README.md) · [Español](README.es.md)
 
@@ -141,8 +143,10 @@ Settings > Apps > Cream Corners (or Programs and Features in Control Panel), the
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Bug reports and pull requests are welcome.
 
-## License and attribution
+## License and author
 
-MIT, 2026, "Cream Corners contributors" — see [LICENSE](LICENSE).
+MIT, 2026, © [Canopus44](https://github.com/Canopus44) — see [LICENSE](LICENSE).
 
-Inspired by [HotCornersWin](https://github.com/flexits/HotCornersWin) by flexits (C#/.NET) and by hot corners in macOS, GNOME and KDE. This is a Rust rewrite that adds edges, per-zone dwell and cooldown, fullscreen pause, multi-monitor scope and versioned configuration.
+### Acknowledgements
+
+Inspired by [HotCornersWin](https://github.com/flexits/HotCornersWin) by flexits and by hot corners in macOS, GNOME and KDE. Cream Corners is an independent Rust rewrite that adds edges, per-zone dwell and cooldown, fullscreen pause, multi-monitor scope and versioned configuration.

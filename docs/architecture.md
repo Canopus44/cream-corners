@@ -76,3 +76,7 @@ Calls into user32, kernel32 and shell32 are declared by hand with `extern "syste
 - Synthetic keys (`keybd_event`) may be ignored by elevated apps or by software that filters injected input.
 - The app is not per-monitor DPI aware: zones are computed in physical pixels, which shows on setups with per-monitor scaling.
 - An action can fail without stalling the engine; the failure is reported through the `action-error` event.
+
+---
+
+Cream Corners is created and maintained by [Canopus44](https://github.com/Canopus44).

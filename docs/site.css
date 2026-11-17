@@ -77,6 +77,10 @@ h1 { margin: 18px 0 16px; font-size: clamp(2.15rem, 4.6vw, 3.4rem); line-height:
 .btn:hover { transform: translateY(-1px); color: var(--ink); box-shadow: var(--shadow-lg); }
 .btn-primary { background: var(--accent); border-color: transparent; color: #fff; }
 .btn-primary:hover { background: var(--accent-ink); color: #fff; }
+.byline { margin-top: 8px; font-size: 13px; color: var(--ink-2); }
+.byline a { color: var(--accent-ink); font-weight: 600; text-decoration: none; }
+.byline a:hover { text-decoration: underline; }
+
 .note { margin: 16px 0 0; color: var(--ink-2); font-size: .84rem; }
 
 .hero-shot {

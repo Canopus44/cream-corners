@@ -70,3 +70,7 @@ An empty URL, or one with another scheme, is discarded and the action becomes `{
 - A command runs with the app's privileges, with no confirmation. Do not import configurations from untrusted sources: read `program`, `args` and `url` before using them.
 - `shell:` and `ms-` can open system paths and panels. Treat them as sensitive input.
 - Preset keys are synthetic: if the foreground window is elevated (UIPI), it may ignore them. Running Cream Corners as administrator reduces the problem.
+
+---
+
+Cream Corners is created and maintained by [Canopus44](https://github.com/Canopus44).

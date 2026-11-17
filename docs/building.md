@@ -99,3 +99,7 @@ cream-corners/
 ```
 
 `src-tauri/target/` and `dist/` are build output and stay out of version control.
+
+---
+
+Cream Corners is created and maintained by [Canopus44](https://github.com/Canopus44).

@@ -101,3 +101,7 @@ No edites el archivo con la app abierta: el autoguardado puede sobrescribir tus 
 ## Migración de versión
 
 `version` identifica el formato. No hay migradores: los campos ausentes toman su default y `version` se reescribe con el valor actual al guardar. Un archivo de una versión futura se carga igual, siempre que conserve los nombres de campo; los desconocidos se descartan.
+
+---
+
+Cream Corners está creado y mantenido por [Canopus44](https://github.com/Canopus44).

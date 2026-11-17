@@ -4,7 +4,8 @@
 
 Hot corners para Windows 10 y 11: al llevar el cursor a una esquina o a un borde de la pantalla se ejecuta una acción (ver tareas, mostrar escritorio, bloquear el equipo, abrir una URL, lanzar un programa). Windows no trae hot corners de mouse configurables, así que esta app los añade, gratis y con licencia MIT. Rust + Tauri 2, UI TypeScript sin framework y cada zona configurable hasta su propia demora.
 
-Sitio web: https://canopus44.github.io/cream-corners/
+Sitio web: https://canopus44.github.io/cream-corners/  
+Creado y mantenido por [Canopus44](https://github.com/Canopus44).
 
 [English](README.md) · [Español](README.es.md)
 
@@ -12,6 +13,7 @@ Sitio web: https://canopus44.github.io/cream-corners/
 [![Tauri](https://img.shields.io/badge/Tauri-2-24C8D8?logo=tauri&logoColor=white)](https://tauri.app/)
 [![Licencia](https://img.shields.io/badge/licencia-MIT-green)](LICENSE)
 [![Windows](https://img.shields.io/badge/Windows-10%2F11-0078D4?logo=windows&logoColor=white)](docs/es/instalacion.md#requisitos)
+[![Hecho por Canopus44](https://img.shields.io/badge/hecho%20por-Canopus44-C98A4B)](https://github.com/Canopus44)
 
 Vive en la bandeja del sistema. Al cerrar la ventana no se cierra la app: se oculta y se reabre con clic izquierdo en el icono, con doble clic o con **Cambiar comandos** en el menú.
 
@@ -138,8 +140,10 @@ Configuración > Aplicaciones > Cream Corners (o Programas y características en
 
 El flujo, los estándares de código y las comprobaciones previas a un PR están en [CONTRIBUTING.md](CONTRIBUTING.md) (en inglés). Los cambios de documentación deben mantener sincronizadas las dos versiones, inglesa y española.
 
-## Licencia y atribución
+## Licencia y autor
 
-MIT, año 2026, titulares "Cream Corners contributors" (ver `LICENSE`).
+MIT, año 2026, © [Canopus44](https://github.com/Canopus44) (ver `LICENSE`).
 
-Inspirada en [HotCornersWin](https://github.com/flexits/HotCornersWin) de flexits (C#/.NET) y en la idea de hot corners de macOS, GNOME y KDE. Esta versión está reescrita en Rust y amplía el original con bordes, demora y cooldown por zona, pausa en pantalla completa, multi-monitor y configuración versionada.
+### Agradecimientos
+
+Inspirada en [HotCornersWin](https://github.com/flexits/HotCornersWin) de flexits y en la idea de hot corners de macOS, GNOME y KDE. Cream Corners es una reescritura independiente en Rust que añade bordes, demora y cooldown por zona, pausa en pantalla completa, multi-monitor y configuración versionada.

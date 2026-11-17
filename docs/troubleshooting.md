@@ -76,3 +76,7 @@ There is no log file. Diagnostic messages go through `eprintln!` to standard err
 ```
 
 Running from PowerShell reveals the errors the UI reports as `action-error`. In development, `npm run tauri dev` prints the same output in its console.
+
+---
+
+Cream Corners is created and maintained by [Canopus44](https://github.com/Canopus44).

@@ -101,3 +101,7 @@ Do not edit the file while the app is running: autosave can overwrite your chang
 ## Version migration
 
 `version` identifies the format. There are no migrators: missing fields take their defaults and `version` is rewritten with the current value on save. A file from a future version still loads as long as the field names match; unknown fields are dropped.
+
+---
+
+Cream Corners is created and maintained by [Canopus44](https://github.com/Canopus44).

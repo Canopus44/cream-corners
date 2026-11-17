@@ -2,6 +2,10 @@
 name = "cream-corners"
 version = "0.1.0"
 description = "Cream Corners - hot corners for Windows 10/11"
+authors = ["Canopus44"]
+repository = "https://github.com/Canopus44/cream-corners"
+homepage = "https://canopus44.github.io/cream-corners/"
+license = "MIT"
 edition = "2021"
 rust-version = "1.77"
 

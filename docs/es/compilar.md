@@ -76,3 +76,7 @@ npm run build
 ```
 
 Se verificó que `npm run build` compila el frontend en esta máquina. El backend Rust se compiló con `npm run tauri build` usando el workload C++ de Visual Studio, y de ahí salieron los instaladores NSIS y MSI publicados. Tras cualquier cambio, repite `npm run tauri build` antes de distribuir. El build de release no genera logs a archivo; para ver los errores en tiempo de ejecución, lanza el `.exe` desde PowerShell y observa la salida estándar de error.
+
+---
+
+Cream Corners está creado y mantenido por [Canopus44](https://github.com/Canopus44).

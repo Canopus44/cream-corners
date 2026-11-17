@@ -1,10 +1,12 @@
-[English](README.md) · [Español](README.es.md)
-
 <img src="docs/images/app-icon.png" width="96" alt="Icono de Cream Corners">
 
-# Cream Corners
+# Cream Corners — Hot Corners para Windows 10 y 11
 
-App de hot corners para Windows 10/11: al llevar el cursor a una esquina o a un borde de la pantalla se ejecuta una acción (ver tareas, mostrar escritorio, bloquear el equipo, abrir una URL, lanzar un programa). Escrita en Rust + Tauri 2, con UI web en TypeScript sin framework y estética iOS sobre paleta crema.
+Hot corners para Windows 10 y 11: al llevar el cursor a una esquina o a un borde de la pantalla se ejecuta una acción (ver tareas, mostrar escritorio, bloquear el equipo, abrir una URL, lanzar un programa). Windows no trae hot corners de mouse configurables, así que esta app los añade, gratis y con licencia MIT. Rust + Tauri 2, UI TypeScript sin framework y cada zona configurable hasta su propia demora.
+
+Sitio web: https://canopus44.github.io/cream-corners/
+
+[English](README.md) · [Español](README.es.md)
 
 [![Rust](https://img.shields.io/badge/Rust-2021-orange?logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![Tauri](https://img.shields.io/badge/Tauri-2-24C8D8?logo=tauri&logoColor=white)](https://tauri.app/)
@@ -17,11 +19,11 @@ Vive en la bandeja del sistema. Al cerrar la ventana no se cierra la app: se ocu
 
 Ventana principal, con las ocho zonas y sus acciones:
 
-<img src="docs/images/zones.png" width="720" alt="Ventana principal de Cream Corners con las ocho zonas">
+<img src="docs/images/zones.png" width="720" alt="Editor de zonas de Cream Corners con las ocho esquinas y bordes activos configurables en Windows 11">
 
 Ajustes generales: activación, demora, cooldown, tamaños, multi-monitor e inicio con Windows:
 
-<img src="docs/images/settings.png" width="720" alt="Pantalla de ajustes de Cream Corners">
+<img src="docs/images/settings.png" width="720" alt="Ajustes de Cream Corners para demora, cooldown, tamaño de zona y sondeo del cursor en Windows 10 y 11">
 
 ## Funciones
 
@@ -42,6 +44,14 @@ Ajustes generales: activación, demora, cooldown, tamaños, multi-monitor e inic
 | Instancia única | Mutex `Local\CreamCornersSingleton`; el segundo lanzamiento trae al frente la ventana existente |
 | Config versionada | Autoguardado, backup y recuperación de archivos corruptos |
 | Bandeja | Check "Activo", "Cambiar comandos", "Salir" |
+
+## Cómo se compara
+
+| Opción | Zonas | Stack | Licencia |
+|---|---|---|---|
+| Windows integrado | Sin hot corners de mouse configurables; Snap Layouts y los gestos de esquina táctiles no son lo mismo | — | — |
+| HotCornersWin | Sólo esquinas | C#/.NET, sólo Windows | MIT |
+| Cream Corners | 4 esquinas + 4 bordes, con acción y demora por zona | Rust + Tauri 2, sólo Windows | MIT |
 
 ## Inicio rápido
 
@@ -73,7 +83,7 @@ cream-corners/
 
 ## Documentación
 
-La documentación está en dos idiomas: inglés como principal (`README.md`, `docs/*.md`) y español (`README.es.md`, `docs/es/*.md`). La interfaz de la app sigue en español.
+La documentación está en dos idiomas: inglés como principal (`README.md`, `docs/*.md`) y español (`README.es.md`, `docs/es/*.md`). La interfaz de la app sigue en español. El sitio publicado está en https://canopus44.github.io/cream-corners/.
 
 - [Instalación](docs/es/instalacion.md) — instalar, primer uso, desinstalar y problemas frecuentes
 - [Arquitectura](docs/es/arquitectura.md) — módulos, concurrencia, flujo del motor
@@ -91,9 +101,35 @@ La documentación está en dos idiomas: inglés como principal (`README.md`, `do
 
 Nota: en la máquina de desarrollo, ejecutar el exe desde una ruta bajo Documentos hace que el sistema deniegue la escritura de la configuración (os error 5). Instalado en Archivos de programa funciona con normalidad; ver [solución de problemas](docs/es/solucion-de-problemas.md).
 
+## Preguntas frecuentes
+
+### ¿Windows trae esquinas activas de serie?
+
+No. Windows 10 y 11 no tienen hot corners de mouse configurables: Snap Layouts y los gestos de esquina táctiles son funciones distintas, no acciones de esquina asignables. Eso es justo lo que añade esta app.
+
+### ¿Es gratis?
+
+Sí. Licencia MIT, sin cuenta y sin telemetría.
+
+### ¿Funciona en Windows 10 y 11?
+
+Sí, en ambos, x64.
+
+### ¿Soporta varios monitores?
+
+Sí: todos los monitores o sólo el principal, desde los ajustes.
+
+### ¿Se activa en juegos o con vídeo a pantalla completa?
+
+La detección se pausa mientras hay una app fullscreen en primer plano, y no dispara nada mientras hay un botón del mouse presionado.
+
+### ¿Cómo se desinstala?
+
+Configuración > Aplicaciones > Cream Corners (o Programas y características en el Panel de control) y, opcionalmente, borrar `%APPDATA%\CreamCorners`.
+
 ## Limitaciones
 
-- Sólo Windows. La UI está en español y no hay actualizador automático.
+- Sólo Windows (x64). La UI está en español y no hay actualizador automático.
 - El motor sondea el cursor en lugar de usar un hook de mouse, así que la latencia es aproximadamente el intervalo de sondeo.
 - Las teclas se envían con `keybd_event` (entrada sintética): algunas apps o ventanas elevadas pueden ignorarlas. Sin firma de código, SmartScreen puede advertir al instalar.
 - No es per-monitor DPI aware: con escalas distintas por monitor las zonas pueden quedar desplazadas.

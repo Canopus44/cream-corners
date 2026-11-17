@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hot Corners para Windows 10/11 — Cream Corners</title>
+<meta name="description" content="Cream Corners: hot corners for Windows 10/11 estilo macOS. Ocho esquinas de pantalla y bordes, 17 presets, multi-monitor. Gratis, sin telemetría, licencia MIT.">
+<link rel="canonical" href="https://canopus44.github.io/cream-corners/es/">
+<link rel="alternate" hreflang="en" href="https://canopus44.github.io/cream-corners/">
+<link rel="alternate" hreflang="es" href="https://canopus44.github.io/cream-corners/es/">
+<link rel="alternate" hreflang="x-default" href="https://canopus44.github.io/cream-corners/">
+<meta name="theme-color" content="#FBF7F0">
+<link rel="icon" href="../images/app-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="../images/app-icon.png">
+<link rel="stylesheet" href="../site.css">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cream Corners">
+<meta property="og:title" content="Hot Corners para Windows 10/11 — Cream Corners">
+<meta property="og:description" content="Hot corners para Windows 10/11 estilo macOS: ocho esquinas y bordes de pantalla, 17 presets, multi-monitor. Gratis y con licencia MIT.">
+<meta property="og:url" content="https://canopus44.github.io/cream-corners/es/">
+<meta property="og:image" content="https://canopus44.github.io/cream-corners/images/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Cream Corners: hot corners para Windows 10/11, editor de zonas crema estilo iOS">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hot Corners para Windows 10/11 — Cream Corners">
+<meta name="twitter:description" content="Hot corners para Windows 10/11 estilo macOS: ocho esquinas y bordes de pantalla, 17 presets, multi-monitor. Gratis y con licencia MIT.">
+<meta name="twitter:image" content="https://canopus44.github.io/cream-corners/images/social-preview.png">
+<meta name="twitter:image:alt" content="Cream Corners: hot corners para Windows 10/11, editor de zonas crema estilo iOS">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://canopus44.github.io/cream-corners/#app",
+      "name": "Cream Corners",
+      "alternateName": "HotCorners for Windows",
+      "description": "Hot corners para Windows 10/11: ocho esquinas y bordes de pantalla configurables que ejecutan un preset, un comando o una URL cuando el cursor se detiene allí.",
+      "url": "https://canopus44.github.io/cream-corners/es/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Windows 10, Windows 11",
+      "softwareVersion": "0.1.0",
+      "license": "https://github.com/Canopus44/cream-corners/blob/main/LICENSE",
+      "downloadUrl": "https://github.com/Canopus44/cream-corners/releases/latest",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Ocho zonas activas: cuatro esquinas y cuatro bordes de pantalla",
+        "17 presets de acción incluidos",
+        "Acciones de comando y URL personalizadas",
+        "Dwell por zona, dwell global y cooldown",
+        "Supresión de arrastre y pausa en pantalla completa",
+        "Soporte multi-monitor: todos los monitores o solo el principal"
+      ],
+      "screenshot": [
+        "https://canopus44.github.io/cream-corners/images/zones.png",
+        "https://canopus44.github.io/cream-corners/images/settings.png",
+        "https://canopus44.github.io/cream-corners/images/actions.png",
+        "https://canopus44.github.io/cream-corners/images/about.png"
+      ],
+      "author": { "@type": "Organization", "name": "Cream Corners", "url": "https://github.com/Canopus44/cream-corners" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://canopus44.github.io/cream-corners/es/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Windows tiene hot corners integrados?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Windows 10/11 tiene Snap Layouts y gestos de esquina en pantallas táctiles, pero no hot corners de ratón configurables; por eso existe esta app." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cream Corners es gratis?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Tiene licencia MIT, el código está en GitHub y no requiere cuenta ni envía telemetría." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Funciona en Windows 11 y Windows 10?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí, en ambos, en compilaciones x64." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Soporta varios monitores?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Las zonas pueden cubrir todos los monitores o solo el monitor principal." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Interfiere con juegos o apps en pantalla completa?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Se pausa cuando una app en pantalla completa está en primer plano (salvo ventanas del shell), y la supresión de arrastre evita que se dispare mientras se mantiene pulsado un botón del ratón." }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo lo desinstalo?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Abre Configuración > Aplicaciones (o Panel de control) y desinstala Cream Corners. Opcionalmente borra la carpeta %APPDATA%\\CreamCorners para eliminar el archivo de configuración." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Ir al contenido</a>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="../">Cream Corners</a>
+    <nav class="head-nav" aria-label="Principal">
+      <a href="#features">Funciones</a>
+      <a href="#screenshots">Capturas</a>
+      <a href="#install">Instalación</a>
+      <a href="#compare">Comparativa</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/Canopus44/cream-corners">GitHub</a>
+      <span class="lang" role="group" aria-label="Idioma">
+        <a href="../" lang="en" hreflang="en">EN</a>
+        <a href="./" aria-current="page">ES</a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <img class="hero-icon" src="../images/app-icon.png" width="76" height="76" loading="lazy" alt="Icono de Cream Corners: cuadrado crema redondeado con una marca de esquina en bronce">
+        <h1 id="hero-title">Hot Corners para Windows 10 y 11</h1>
+        <p class="lede">Deja el cursor en una esquina o borde de la pantalla y se dispara una acción: Vista de tareas, mostrar el escritorio, bloquear el equipo, un escritorio virtual, un programa o una URL. Cream Corners es una app de bandeja en Rust + Tauri 2 con interfaz crema al estilo iOS y sin telemetría.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/Canopus44/cream-corners/releases/latest">Descargar para Windows</a>
+          <a class="btn" href="https://github.com/Canopus44/cream-corners">Ver en GitHub</a>
+        </div>
+        <p class="note">Versión 0.1.0 · Windows 10/11 x64 · Gratis y código abierto (MIT)</p>
+      </div>
+      <img class="hero-shot" src="../images/zones.png" width="1000" height="740" alt="Editor de zonas de Cream Corners con ocho hot corners y bordes para Windows, cada uno con su acción y dwell">
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <div class="section-head">
+        <p class="eyebrow">Funciones</p>
+        <h2 id="features-title">Ocho zonas, ajustadas a tu forma de trabajar</h2>
+        <p>Cada esquina y cada borde de la pantalla es un disparador propio, con su acción y su dwell. Los valores globales mantienen todo predecible.</p>
+      </div>
+      <ul class="cards">
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8h2M8 3v2M21 16h-2M16 21v-2"/></svg></span>
+          <h3>Cuatro esquinas y cuatro bordes</h3>
+          <p>Ocho zonas activas por pantalla, cada una con interruptor, acción y dwell opcional propio.</p>
+        </li>
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></span>
+          <h3>17 presets listos</h3>
+          <p>Vista de tareas, Mostrar escritorio, Bloquear PC, escritorios virtuales, Administrador de tareas, búsqueda, widgets, enlace rápido y más.</p>
+        </li>
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m7 9 3 3-3 3M13 15h4"/></svg></span>
+          <h3>Comandos y URLs</h3>
+          <p>Ejecuta un programa con su lista de argumentos, sin shell de por medio, o abre enlaces http, https, ms- y shell:.</p>
+        </li>
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3>Dwell y cooldown</h3>
+          <p>Dwell global de 220 ms por defecto, de 0 a 3000 ms, más un cooldown de 800 ms para que una zona no se dispare dos veces.</p>
+        </li>
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M10 8v5M14 8v5M8 21h8M12 17v4"/></svg></span>
+          <h3>Consciente de arrastre y pantalla completa</h3>
+          <p>Nunca se dispara mientras se mantiene pulsado un botón del ratón y se pausa cuando una app en pantalla completa está en primer plano.</p>
+        </li>
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="9" height="8" rx="2"/><rect x="13" y="5" width="9" height="8" rx="2"/><path d="M6 13v4M8.5 17h-5M17 13v4M19.5 17h-5"/></svg></span>
+          <h3>Multimonitor y bandeja</h3>
+          <p>Cubre todos los monitores o solo el principal. Vive en la bandeja, mantiene una sola instancia y puede arrancar con Windows.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="screenshots" aria-labelledby="screenshots-title">
+      <div class="section-head">
+        <p class="eyebrow">Capturas</p>
+        <h2 id="screenshots-title">Una interfaz crema y tranquila, al estilo iOS</h2>
+        <p>Toda la app son tres paneles: ajustes globales, el selector de acciones y la página Acerca de.</p>
+      </div>
+      <div class="shots">
+        <figure>
+          <img src="../images/settings.png" loading="lazy" alt="Ajustes de Cream Corners para Windows: dwell global, cooldown, tamaño de esquina y borde, polling del cursor, arrastre y pantalla completa">
+          <figcaption>Ajustes globales: dwell, cooldown, tamaño de zona, intervalo de polling, arrastre y pantalla completa.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/actions.png" loading="lazy" alt="Selector de acciones de Cream Corners para hot corners con 17 presets de Windows, comandos personalizados y URLs">
+          <figcaption>Selector de acciones: 17 presets, comandos externos y URLs.</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/about.png" loading="lazy" alt="Panel Acerca de de Cream Corners con la versión 0.1.0, la ubicación de la configuración y la atribución MIT">
+          <figcaption>Panel Acerca de con versión, ubicación de la configuración y atribución.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="install" aria-labelledby="install-title">
+      <div class="section-head">
+        <p class="eyebrow">Instalación</p>
+        <h2 id="install-title">Instalar Cream Corners en Windows</h2>
+        <p>Un instalador, sin cuenta y sin servicio de autoactualización. Descarga la compilación desde la última release de GitHub.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Descarga el instalador</h3>
+          <p>Desde la <a href="https://github.com/Canopus44/cream-corners/releases/latest">última release</a>, toma <code>Cream Corners_0.1.0_x64-setup.exe</code> (NSIS, recomendado) o el <code>.msi</code>.</p>
+        </li>
+        <li>
+          <h3>Ejecútalo y acepta el UAC</h3>
+          <p>Ambos instaladores son per-machine, se instalan en <code>Program Files</code> y piden elevación. La compilación no está firmada, así que SmartScreen muestra <strong>Más información</strong> y luego <strong>Ejecutar de todas formas</strong>.</p>
+        </li>
+        <li>
+          <h3>Configura tus zonas</h3>
+          <p>La ventana abre en el editor de zonas. Por defecto: arriba a la izquierda Vista de tareas, abajo a la izquierda Mostrar escritorio, abajo a la derecha Bloquear PC. Queda en la bandeja.</p>
+        </li>
+      </ol>
+      <p class="callout"><strong>Nota sobre SmartScreen.</strong> Cream Corners 0.1.0 no tiene certificado de firma de código, así que Windows puede mostrar «Windows protegió tu PC». Elige <strong>Más información</strong> y <strong>Ejecutar de todas formas</strong> solo si descargaste el archivo desde la página oficial de <a href="https://github.com/Canopus44/cream-corners/releases/latest">releases de GitHub</a>. Se requiere WebView2 Runtime, incluido en Windows 11 y en la mayoría de equipos con Windows 10.</p>
+      <p class="fine">Límites conocidos: no es per-monitor DPI aware, así que configuraciones con escalados mixtos pueden desalinear los bordes de zona; las ventanas elevadas pueden ignorar las teclas sintéticas; no hay autoactualización. La configuración vive en <code>%APPDATA%\CreamCorners\settings.json</code>. Guía completa: <a href="https://github.com/Canopus44/cream-corners/blob/main/docs/es/instalacion.md">guía de instalación</a>.</p>
+    </section>
+
+    <section id="compare" aria-labelledby="compare-title">
+      <div class="section-head">
+        <p class="eyebrow">Comparativa</p>
+        <h2 id="compare-title">Cream Corners frente a Windows y HotCornersWin</h2>
+        <p>Windows no tiene hot corners de ratón configurables, así que cualquier configuración de hot corners es un añadido. Así se diferencian las opciones.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption>Comparativa de funciones de herramientas de hot corners para Windows 10/11.</caption>
+          <thead>
+            <tr><th scope="col">Función</th><th scope="col">Windows integrado</th><th scope="col">HotCornersWin</th><th scope="col">Cream Corners</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Hot corners con ratón</th><td>No</td><td>Sí</td><td>Sí</td></tr>
+            <tr><th scope="row">Acciones por zona</th><td>—</td><td>Sí</td><td>Sí, esquinas y bordes</td></tr>
+            <tr><th scope="row">Dwell / cooldown</th><td>—</td><td>Sí</td><td>Sí, dwell por zona más cooldown</td></tr>
+            <tr><th scope="row">Multimonitor</th><td>—</td><td>Parcial</td><td>Sí, todos o principal</td></tr>
+            <tr><th scope="row">Código abierto</th><td>—</td><td>Sí (MIT)</td><td>Sí (MIT)</td></tr>
+            <tr><th scope="row">Precio</th><td>Incluido en Windows</td><td>Gratis</td><td>Gratis</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine">HotCornersWin, de flexits, es el proyecto C#/.NET que inspiró esta reescritura en Rust.</p>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Preguntas sobre hot corners</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>¿Windows tiene hot corners integrados?</summary>
+          <p>No. Windows 10/11 tiene Snap Layouts y gestos de esquina en pantallas táctiles, pero no hot corners de ratón configurables; por eso existe esta app.</p>
+        </details>
+        <details>
+          <summary>¿Cream Corners es gratis?</summary>
+          <p>Sí. Tiene licencia MIT, el código está en <a href="https://github.com/Canopus44/cream-corners">GitHub</a> y no requiere cuenta ni envía telemetría.</p>
+        </details>
+        <details>
+          <summary>¿Funciona en Windows 11 y Windows 10?</summary>
+          <p>Sí, en ambos, en compilaciones x64.</p>
+        </details>
+        <details>
+          <summary>¿Soporta varios monitores?</summary>
+          <p>Sí. Las zonas pueden cubrir todos los monitores o solo el monitor principal.</p>
+        </details>
+        <details>
+          <summary>¿Interfiere con juegos o apps en pantalla completa?</summary>
+          <p>Se pausa cuando una app en pantalla completa está en primer plano (salvo ventanas del shell), y la supresión de arrastre evita que se dispare mientras se mantiene pulsado un botón del ratón.</p>
+        </details>
+        <details>
+          <summary>¿Cómo lo desinstalo?</summary>
+          <p>Abre Configuración &gt; Aplicaciones (o Panel de control) y desinstala Cream Corners. Opcionalmente borra <code>%APPDATA%\CreamCorners</code> para eliminar el archivo de configuración.</p>
+        </details>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="brand"><img src="../images/app-icon.png" width="28" height="28" loading="lazy" alt="Icono de Cream Corners para hot corners en Windows">Cream Corners</p>
+      <p>Hot corners para Windows 10/11. Gratis, licencia MIT, sin telemetría. Escrito en Rust con Tauri 2.</p>
+    </div>
+    <nav aria-label="Documentación">
+      <h2>Documentación</h2>
+      <ul>
+        <li><a href="https://github.com/Canopus44/cream-corners/blob/main/docs/es/instalacion.md">Instalación</a></li>
+        <li><a href="https://github.com/Canopus44/cream-corners/blob/main/docs/es/configuracion.md">Configuración</a></li>
+        <li><a href="https://github.com/Canopus44/cream-corners/blob/main/docs/es/acciones.md">Acciones</a></li>
+        <li><a href="https://github.com/Canopus44/cream-corners/blob/main/docs/es/solucion-de-problemas.md">Solución de problemas</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Proyecto">
+      <h2>Proyecto</h2>
+      <ul>
+        <li><a href="https://github.com/Canopus44/cream-corners">Repositorio en GitHub</a></li>
+        <li><a href="https://github.com/Canopus44/cream-corners/releases/latest">Última release</a></li>
+        <li><a href="https://github.com/Canopus44/cream-corners/blob/main/LICENSE">Licencia MIT</a></li>
+        <li><a href="../" lang="en" hreflang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <p class="fine">MIT © 2026 Cream Corners contributors. Inspirado por <a href="https://github.com/flexits/HotCornersWin">HotCornersWin</a> de flexits y por los hot corners de macOS, GNOME y KDE. Sin afiliación con Apple ni Microsoft.</p>
+  </div>
+</footer>
+</body>
+</html>

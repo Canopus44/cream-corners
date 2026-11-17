@@ -1,8 +1,10 @@
 <img src="docs/images/app-icon.png" width="96" alt="Cream Corners icon">
 
-# Cream Corners
+# Cream Corners — Hot Corners for Windows 10 and 11
 
-Hot corners for Windows 10 and 11: park the cursor in a screen corner or on a screen edge and an action fires — Task View, show desktop, lock the PC, open a URL, launch a program. Written in Rust with Tauri 2, a framework-free TypeScript UI, and an iOS-flavoured cream design. It lives in the tray, stays out of the way while you drag or play fullscreen, and keeps every zone configurable down to its own dwell time.
+Hot corners for Windows 10 and 11: park the cursor in a screen corner or on a screen edge and an action fires — Task View, show desktop, lock the PC, open a URL, launch a program. Windows has no configurable mouse hot corners, so this app adds them, free under the MIT license. Rust + Tauri 2, a framework-free TypeScript UI, and every zone configurable down to its own dwell time.
+
+Website: https://canopus44.github.io/cream-corners/
 
 [![Rust](https://img.shields.io/badge/Rust-2021-orange?logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![Tauri](https://img.shields.io/badge/Tauri-2-24C8D8?logo=tauri&logoColor=white)](https://tauri.app/)
@@ -13,19 +15,19 @@ Hot corners for Windows 10 and 11: park the cursor in a screen corner or on a sc
 
 ## Screenshots
 
-<img src="docs/images/zones.png" width="480" alt="Zone editor with the eight hot zones">
+<img src="docs/images/zones.png" width="480" alt="Cream Corners zone editor showing eight configurable hot corners and edges on Windows 11">
 
 The zone editor: eight zones, each with its own switch, action and dwell override.
 
-<img src="docs/images/settings.png" width="480" alt="Global settings: dwell, cooldown, zone size, polling">
+<img src="docs/images/settings.png" width="480" alt="Cream Corners settings for hot corner dwell time, cooldown, zone size and cursor polling on Windows 10 and 11">
 
 Global tuning: dwell, cooldown, zone size, polling interval, drag and fullscreen behaviour.
 
-<img src="docs/images/actions.png" width="480" alt="Action picker with presets, commands and URLs">
+<img src="docs/images/actions.png" width="480" alt="Cream Corners corner action picker with Windows presets, custom commands and URLs">
 
 Action picker: 17 presets, external commands and URLs.
 
-<img src="docs/images/about.png" width="480" alt="About panel with version and attribution">
+<img src="docs/images/about.png" width="480" alt="Cream Corners about panel with version, config file location and MIT attribution">
 
 About panel with version, config location and attribution.
 
@@ -48,6 +50,14 @@ About panel with version, config location and attribution.
 | Single instance | A second launch brings the existing window forward |
 | Config safety | Autosave, atomic writes, backup and corrupt-file quarantine |
 | Tray | Active toggle, "Change commands", "Exit" |
+
+## How it compares
+
+| Option | Zones | Stack | License |
+|---|---|---|---|
+| Windows built-in | No configurable mouse hot corners; Snap Layouts and touch corner gestures are not the same thing | — | — |
+| HotCornersWin | Corners only | C#/.NET, Windows only | MIT |
+| Cream Corners | 4 corners + 4 edges, per-zone action and dwell | Rust + Tauri 2, Windows only | MIT |
 
 ## Quick start
 
@@ -75,6 +85,8 @@ Path: `%APPDATA%\CreamCorners\settings.json` (falls back to `%LOCALAPPDATA%\Crea
 
 ## Documentation
 
+Full documentation is also published at https://canopus44.github.io/cream-corners/.
+
 | Page | English | Español |
 |---|---|---|
 | Architecture | [docs/architecture.md](docs/architecture.md) | [docs/es/arquitectura.md](docs/es/arquitectura.md) |
@@ -90,6 +102,32 @@ Path: `%APPDATA%\CreamCorners\settings.json` (falls back to `%LOCALAPPDATA%\Crea
 - The release build renders the UI and the top-left corner opens Task View.
 - Development-machine quirk: running the executable from under Documents made config writes fail with OS error 5; the installed copy works normally.
 - Not tested across the full range of hardware, multi-monitor arrangements or Windows builds.
+
+## FAQ
+
+### Does Windows have built-in hot corners?
+
+No. Windows 10 and 11 have no configurable mouse hot corners: Snap Layouts and the touch corner gestures are separate features, not assignable corner actions. That is what this app adds.
+
+### Is Cream Corners free?
+
+Yes. MIT license, no account, no telemetry.
+
+### Does it work on Windows 10 and 11?
+
+Both, x64.
+
+### Does it support multiple monitors?
+
+Yes — every monitor or the primary monitor only, from the settings.
+
+### Do hot corners fire during games or fullscreen video?
+
+Detection pauses while a fullscreen app is in the foreground, and nothing fires while a mouse button is held.
+
+### How do I uninstall it?
+
+Settings > Apps > Cream Corners (or Programs and Features in Control Panel), then optionally delete `%APPDATA%\CreamCorners`.
 
 ## Limitations
 

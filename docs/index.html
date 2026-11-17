@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hot Corners for Windows 10/11 — Cream Corners</title>
+<meta name="description" content="Cream Corners brings macOS-style hot corners for Windows 10/11: eight screen corner and edge zones, 17 presets, multi-monitor support, free and MIT-licensed.">
+<link rel="canonical" href="https://canopus44.github.io/cream-corners/">
+<link rel="alternate" hreflang="en" href="https://canopus44.github.io/cream-corners/">
+<link rel="alternate" hreflang="es" href="https://canopus44.github.io/cream-corners/es/">
+<link rel="alternate" hreflang="x-default" href="https://canopus44.github.io/cream-corners/">
+<meta name="theme-color" content="#FBF7F0">
+<link rel="icon" href="images/app-icon.png" type="image/png">
+<link rel="apple-touch-icon" href="images/app-icon.png">
+<link rel="stylesheet" href="site.css">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cream Corners">
+<meta property="og:title" content="Hot Corners for Windows 10/11 — Cream Corners">
+<meta property="og:description" content="macOS-style hot corners for Windows 10/11: eight screen corner and edge zones, 17 presets, multi-monitor support. Free and MIT-licensed.">
+<meta property="og:url" content="https://canopus44.github.io/cream-corners/">
+<meta property="og:image" content="https://canopus44.github.io/cream-corners/images/social-preview.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+<meta property="og:image:alt" content="Cream Corners: hot corners for Windows 10/11, cream iOS-style zone editor">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hot Corners for Windows 10/11 — Cream Corners">
+<meta name="twitter:description" content="macOS-style hot corners for Windows 10/11: eight screen corner and edge zones, 17 presets, multi-monitor support. Free and MIT-licensed.">
+<meta name="twitter:image" content="https://canopus44.github.io/cream-corners/images/social-preview.png">
+<meta name="twitter:image:alt" content="Cream Corners: hot corners for Windows 10/11, cream iOS-style zone editor">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://canopus44.github.io/cream-corners/#app",
+      "name": "Cream Corners",
+      "alternateName": "HotCorners for Windows",
+      "description": "Hot corners for Windows 10/11: eight configurable screen corner and edge zones that run a preset, command or URL after the cursor rests there.",
+      "url": "https://canopus44.github.io/cream-corners/",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Windows 10, Windows 11",
+      "softwareVersion": "0.1.0",
+      "license": "https://github.com/Canopus44/cream-corners/blob/main/LICENSE",
+      "downloadUrl": "https://github.com/Canopus44/cream-corners/releases/latest",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": [
+        "Eight hot zones: four screen corners and four screen edges",
+        "17 built-in action presets",
+        "Custom command and URL actions",
+        "Per-zone dwell override, global dwell and cooldown",
+        "Drag suppression and fullscreen pause",
+        "Multi-monitor support: all monitors or primary only"
+      ],
+      "screenshot": [
+        "https://canopus44.github.io/cream-corners/images/zones.png",
+        "https://canopus44.github.io/cream-corners/images/settings.png",
+        "https://canopus44.github.io/cream-corners/images/actions.png",
+        "https://canopus44.github.io/cream-corners/images/about.png"
+      ],
+      "author": { "@type": "Organization", "name": "Cream Corners", "url": "https://github.com/Canopus44/cream-corners" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://canopus44.github.io/cream-corners/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does Windows have built-in hot corners?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Windows 10/11 has Snap Layouts and corner gestures on touch, but no configurable mouse hot corners; that is why this app exists." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Cream Corners free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is MIT-licensed, the source is on GitHub, and there is no account and no telemetry." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it work on Windows 11 and Windows 10?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, on both, x64 builds." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does it support multiple monitors?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Zones can cover all monitors or the primary monitor only." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will it interfere with games or fullscreen apps?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It pauses when a fullscreen app is in the foreground (shell windows excluded), and drag suppression means it never fires while a mouse button is held." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I uninstall it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Open Settings > Apps (or Control Panel) and uninstall Cream Corners. Optionally delete the %APPDATA%\\CreamCorners folder to remove the settings file." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="./">Cream Corners</a>
+    <nav class="head-nav" aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="#install">Install</a>
+      <a href="#compare">Compare</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://github.com/Canopus44/cream-corners">GitHub</a>
+      <span class="lang" role="group" aria-label="Language">
+        <a href="./" aria-current="page">EN</a>
+        <a href="es/" lang="es" hreflang="es">ES</a>
+      </span>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <img class="hero-icon" src="images/app-icon.png" width="76" height="76" loading="lazy" alt="Cream Corners icon: cream rounded square with a bronze corner mark">
+        <h1 id="hero-title">Hot Corners for Windows 10 and 11</h1>
+        <p class="lede">Park the cursor in a screen corner or edge and an action fires: Task View, show desktop, lock the PC, a virtual desktop, a program or a URL. Cream Corners is a Rust + Tauri 2 tray app with a cream, iOS-style interface and no telemetry.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/Canopus44/cream-corners/releases/latest">Download for Windows</a>
+          <a class="btn" href="https://github.com/Canopus44/cream-corners">View on GitHub</a>
+        </div>
+        <p class="note">Version 0.1.0 · Windows 10/11 x64 · Free and open source (MIT)</p>
+      </div>
+      <img class="hero-shot" src="images/zones.png" width="1000" height="740" alt="Cream Corners zone editor showing eight hot corners and edges for Windows, each with its own action and dwell time">
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <div class="section-head">
+        <p class="eyebrow">Features</p>
+        <h2 id="features-title">Eight zones, tuned the way you work</h2>
+        <p>Every screen corner and edge is its own trigger, with its own action and dwell override. The global defaults keep it predictable.</p>
+      </div>
+      <ul class="cards">
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M3 8h2M8 3v2M21 16h-2M16 21v-2"/></svg></span>
+          <h3>Four corners and four edges</h3>
+          <p>Eight hot zones per screen, each with an on/off switch, an action and an optional dwell override.</p>
+        </li>
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></span>
+          <h3>17 ready-made presets</h3>
+          <p>Task View, Show desktop, Lock PC, virtual desktops, Task Manager, search, widgets, quick link and more.</p>
+        </li>
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="m7 9 3 3-3 3M13 15h4"/></svg></span>
+          <h3>Commands and URLs</h3>
+          <p>Run a program with an argument list, no shell in between, or open http, https, ms- and shell: links.</p>
+        </li>
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <h3>Dwell and cooldown</h3>
+          <p>220 ms global dwell by default, 0 to 3000 ms, plus an 800 ms cooldown so a zone does not fire twice.</p>
+        </li>
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M10 8v5M14 8v5M8 21h8M12 17v4"/></svg></span>
+          <h3>Drag and fullscreen aware</h3>
+          <p>Never fires while a mouse button is held, and it pauses while a fullscreen app is in the foreground.</p>
+        </li>
+        <li class="card">
+          <span class="glyph" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="9" height="8" rx="2"/><rect x="13" y="5" width="9" height="8" rx="2"/><path d="M6 13v4M8.5 17h-5M17 13v4M19.5 17h-5"/></svg></span>
+          <h3>Multi-monitor, tray resident</h3>
+          <p>Cover all monitors or the primary only. Runs in the tray, keeps a single instance and can start with Windows.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="screenshots" aria-labelledby="screenshots-title">
+      <div class="section-head">
+        <p class="eyebrow">Screenshots</p>
+        <h2 id="screenshots-title">A calm, cream iOS-style UI</h2>
+        <p>The whole app is three panels: global tuning, the action picker and the About page.</p>
+      </div>
+      <div class="shots">
+        <figure>
+          <img src="images/settings.png" loading="lazy" alt="Cream Corners settings for Windows: global dwell, cooldown, corner and edge size, cursor polling, drag and fullscreen options">
+          <figcaption>Global settings: dwell, cooldown, zone size, polling interval, drag and fullscreen behaviour.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/actions.png" loading="lazy" alt="Cream Corners action picker for hot corners with 17 Windows presets, custom commands and URLs">
+          <figcaption>Action picker: 17 presets, external commands and URLs.</figcaption>
+        </figure>
+        <figure>
+          <img src="images/about.png" loading="lazy" alt="Cream Corners About panel showing version 0.1.0, config file location and MIT attribution">
+          <figcaption>About panel with version, config location and attribution.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="install" aria-labelledby="install-title">
+      <div class="section-head">
+        <p class="eyebrow">Install</p>
+        <h2 id="install-title">Installing Cream Corners on Windows</h2>
+        <p>One installer, no account, no auto-update service. Grab the build from the latest GitHub release.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Download the installer</h3>
+          <p>From the <a href="https://github.com/Canopus44/cream-corners/releases/latest">latest release</a>, take <code>Cream Corners_0.1.0_x64-setup.exe</code> (NSIS, recommended) or the <code>.msi</code>.</p>
+        </li>
+        <li>
+          <h3>Run it and accept UAC</h3>
+          <p>Both installers are per-machine, land in <code>Program Files</code> and ask for elevation. The build is unsigned, so SmartScreen shows <strong>More info</strong>, then <strong>Run anyway</strong>.</p>
+        </li>
+        <li>
+          <h3>Set up your zones</h3>
+          <p>The window opens on the zone editor. Defaults: top-left Task View, bottom-left Show desktop, bottom-right Lock PC. It stays in the tray.</p>
+        </li>
+      </ol>
+      <p class="callout"><strong>SmartScreen note.</strong> Cream Corners 0.1.0 has no code-signing certificate, so Windows may show "Windows protected your PC". Choose <strong>More info</strong> and <strong>Run anyway</strong> only if you downloaded the file from the official <a href="https://github.com/Canopus44/cream-corners/releases/latest">GitHub releases</a> page. WebView2 Runtime is required and ships with Windows 11 and most Windows 10 systems.</p>
+      <p class="fine">Known limits: not per-monitor DPI aware, so mixed-scaling setups can offset zone edges; elevated windows may ignore synthetic keys; no auto-update. Settings live in <code>%APPDATA%\CreamCorners\settings.json</code>. Full walkthrough: <a href="https://github.com/Canopus44/cream-corners/blob/main/docs/installation.md">installation guide</a>.</p>
+    </section>
+
+    <section id="compare" aria-labelledby="compare-title">
+      <div class="section-head">
+        <p class="eyebrow">Compare</p>
+        <h2 id="compare-title">Cream Corners vs built-in Windows and HotCornersWin</h2>
+        <p>Windows has no configurable mouse hot corners, so any hot-corner setup is an add-on. Here is how the options differ.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption>Feature comparison of hot corner tools for Windows 10/11.</caption>
+          <thead>
+            <tr><th scope="col">Capability</th><th scope="col">Windows built-in</th><th scope="col">HotCornersWin</th><th scope="col">Cream Corners</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">Hot corners for mouse</th><td>No</td><td>Yes</td><td>Yes</td></tr>
+            <tr><th scope="row">Per-zone actions</th><td>—</td><td>Yes</td><td>Yes, corners and edges</td></tr>
+            <tr><th scope="row">Dwell / cooldown</th><td>—</td><td>Yes</td><td>Yes, per-zone dwell plus cooldown</td></tr>
+            <tr><th scope="row">Multi-monitor</th><td>—</td><td>Partial</td><td>Yes, all or primary</td></tr>
+            <tr><th scope="row">Open source</th><td>—</td><td>Yes (MIT)</td><td>Yes (MIT)</td></tr>
+            <tr><th scope="row">Price</th><td>Included with Windows</td><td>Free</td><td>Free</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="fine">HotCornersWin by flexits is the C#/.NET project that inspired this Rust rewrite.</p>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="section-head">
+        <p class="eyebrow">FAQ</p>
+        <h2 id="faq-title">Hot corners questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Does Windows have built-in hot corners?</summary>
+          <p>No. Windows 10/11 has Snap Layouts and corner gestures on touch, but no configurable mouse hot corners; that is why this app exists.</p>
+        </details>
+        <details>
+          <summary>Is Cream Corners free?</summary>
+          <p>Yes. It is MIT-licensed, the source is on <a href="https://github.com/Canopus44/cream-corners">GitHub</a>, and there is no account and no telemetry.</p>
+        </details>
+        <details>
+          <summary>Does it work on Windows 11 and Windows 10?</summary>
+          <p>Yes, on both, x64 builds.</p>
+        </details>
+        <details>
+          <summary>Does it support multiple monitors?</summary>
+          <p>Yes. Zones can cover all monitors or the primary monitor only.</p>
+        </details>
+        <details>
+          <summary>Will it interfere with games or fullscreen apps?</summary>
+          <p>It pauses when a fullscreen app is in the foreground (shell windows excluded), and drag suppression means it never fires while a mouse button is held.</p>
+        </details>
+        <details>
+          <summary>How do I uninstall it?</summary>
+          <p>Open Settings &gt; Apps (or Control Panel) and uninstall Cream Corners. Optionally delete <code>%APPDATA%\CreamCorners</code> to remove the settings file.</p>
+        </details>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot-grid">
+    <div>
+      <p class="brand"><img src="images/app-icon.png" width="28" height="28" loading="lazy" alt="Cream Corners app icon for Windows hot corners">Cream Corners</p>
+      <p>Hot corners for Windows 10/11. Free, MIT-licensed, no telemetry. Written in Rust with Tauri 2.</p>
+    </div>
+    <nav aria-label="Documentation">
+      <h2>Documentation</h2>
+      <ul>
+        <li><a href="https://github.com/Canopus44/cream-corners/blob/main/docs/installation.md">Installation</a></li>
+        <li><a href="https://github.com/Canopus44/cream-corners/blob/main/docs/configuration.md">Configuration</a></li>
+        <li><a href="https://github.com/Canopus44/cream-corners/blob/main/docs/actions.md">Actions</a></li>
+        <li><a href="https://github.com/Canopus44/cream-corners/blob/main/docs/troubleshooting.md">Troubleshooting</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Project">
+      <h2>Project</h2>
+      <ul>
+        <li><a href="https://github.com/Canopus44/cream-corners">GitHub repository</a></li>
+        <li><a href="https://github.com/Canopus44/cream-corners/releases/latest">Latest release</a></li>
+        <li><a href="https://github.com/Canopus44/cream-corners/blob/main/LICENSE">MIT license</a></li>
+        <li><a href="es/" lang="es" hreflang="es">Español</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="wrap foot-legal">
+    <p class="fine">MIT © 2026 Cream Corners contributors. Inspired by <a href="https://github.com/flexits/HotCornersWin">HotCornersWin</a> by flexits and by hot corners in macOS, GNOME and KDE. Not affiliated with Apple or Microsoft.</p>
+  </div>
+</footer>
+</body>
+</html>

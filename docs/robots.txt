@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://canopus44.github.io/cream-corners/sitemap.xml

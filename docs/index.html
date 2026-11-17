@@ -20,6 +20,7 @@
 <meta property="og:description" content="macOS-style hot corners for Windows 10/11: eight screen corner and edge zones, 17 presets, multi-monitor support. Free and MIT-licensed.">
 <meta property="og:url" content="https://canopus44.github.io/cream-corners/">
 <meta property="og:image" content="https://canopus44.github.io/cream-corners/images/social-preview.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="640">
 <meta property="og:image:alt" content="Cream Corners: hot corners for Windows 10/11, cream iOS-style zone editor">
@@ -48,7 +49,11 @@
       "softwareVersion": "0.1.0",
       "license": "https://github.com/Canopus44/cream-corners/blob/main/LICENSE",
       "downloadUrl": "https://github.com/Canopus44/cream-corners/releases/latest",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
       "featureList": [
         "Eight hot zones: four screen corners and four screen edges",
         "17 built-in action presets",
@@ -63,7 +68,11 @@
         "https://canopus44.github.io/cream-corners/images/actions.png",
         "https://canopus44.github.io/cream-corners/images/about.png"
       ],
-      "author": { "@type": "Organization", "name": "Cream Corners", "url": "https://github.com/Canopus44/cream-corners" }
+      "author": {
+        "@type": "Organization",
+        "name": "Cream Corners",
+        "url": "https://github.com/Canopus44/cream-corners"
+      }
     },
     {
       "@type": "FAQPage",
@@ -72,34 +81,71 @@
         {
           "@type": "Question",
           "name": "Does Windows have built-in hot corners?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Windows 10/11 has Snap Layouts and corner gestures on touch, but no configurable mouse hot corners; that is why this app exists." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Windows 10/11 has Snap Layouts and corner gestures on touch, but no configurable mouse hot corners; that is why this app exists."
+          }
         },
         {
           "@type": "Question",
           "name": "Is Cream Corners free?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is MIT-licensed, the source is on GitHub, and there is no account and no telemetry." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It is MIT-licensed, the source is on GitHub, and there is no account and no telemetry."
+          }
         },
         {
           "@type": "Question",
           "name": "Does it work on Windows 11 and Windows 10?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes, on both, x64 builds." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, on both, x64 builds."
+          }
         },
         {
           "@type": "Question",
           "name": "Does it support multiple monitors?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Zones can cover all monitors or the primary monitor only." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Zones can cover all monitors or the primary monitor only."
+          }
         },
         {
           "@type": "Question",
           "name": "Will it interfere with games or fullscreen apps?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It pauses when a fullscreen app is in the foreground (shell windows excluded), and drag suppression means it never fires while a mouse button is held." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It pauses when a fullscreen app is in the foreground (shell windows excluded), and drag suppression means it never fires while a mouse button is held."
+          }
         },
         {
           "@type": "Question",
           "name": "How do I uninstall it?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Open Settings > Apps (or Control Panel) and uninstall Cream Corners. Optionally delete the %APPDATA%\\CreamCorners folder to remove the settings file." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Open Settings > Apps (or Control Panel) and uninstall Cream Corners. Optionally delete the %APPDATA%\\CreamCorners folder to remove the settings file."
+          }
         }
       ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://canopus44.github.io/cream-corners/#website",
+      "url": "https://canopus44.github.io/cream-corners/",
+      "name": "Cream Corners",
+      "inLanguage": [
+        "en",
+        "es"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://canopus44.github.io/cream-corners/#source",
+      "name": "cream-corners",
+      "codeRepository": "https://github.com/Canopus44/cream-corners",
+      "programmingLanguage": "Rust",
+      "license": "https://opensource.org/license/mit",
+      "runtimePlatform": "Windows 10, Windows 11"
     }
   ]
 }

@@ -20,6 +20,7 @@
 <meta property="og:description" content="Hot corners para Windows 10/11 estilo macOS: ocho esquinas y bordes de pantalla, 17 presets, multi-monitor. Gratis y con licencia MIT.">
 <meta property="og:url" content="https://canopus44.github.io/cream-corners/es/">
 <meta property="og:image" content="https://canopus44.github.io/cream-corners/images/social-preview.png">
+<meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1280">
 <meta property="og:image:height" content="640">
 <meta property="og:image:alt" content="Cream Corners: hot corners para Windows 10/11, editor de zonas crema estilo iOS">
@@ -48,7 +49,11 @@
       "softwareVersion": "0.1.0",
       "license": "https://github.com/Canopus44/cream-corners/blob/main/LICENSE",
       "downloadUrl": "https://github.com/Canopus44/cream-corners/releases/latest",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
       "featureList": [
         "Ocho zonas activas: cuatro esquinas y cuatro bordes de pantalla",
         "17 presets de acción incluidos",
@@ -63,7 +68,11 @@
         "https://canopus44.github.io/cream-corners/images/actions.png",
         "https://canopus44.github.io/cream-corners/images/about.png"
       ],
-      "author": { "@type": "Organization", "name": "Cream Corners", "url": "https://github.com/Canopus44/cream-corners" }
+      "author": {
+        "@type": "Organization",
+        "name": "Cream Corners",
+        "url": "https://github.com/Canopus44/cream-corners"
+      }
     },
     {
       "@type": "FAQPage",
@@ -72,34 +81,71 @@
         {
           "@type": "Question",
           "name": "¿Windows tiene hot corners integrados?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Windows 10/11 tiene Snap Layouts y gestos de esquina en pantallas táctiles, pero no hot corners de ratón configurables; por eso existe esta app." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Windows 10/11 tiene Snap Layouts y gestos de esquina en pantallas táctiles, pero no hot corners de ratón configurables; por eso existe esta app."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Cream Corners es gratis?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Tiene licencia MIT, el código está en GitHub y no requiere cuenta ni envía telemetría." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Tiene licencia MIT, el código está en GitHub y no requiere cuenta ni envía telemetría."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Funciona en Windows 11 y Windows 10?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sí, en ambos, en compilaciones x64." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, en ambos, en compilaciones x64."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Soporta varios monitores?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Sí. Las zonas pueden cubrir todos los monitores o solo el monitor principal." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Las zonas pueden cubrir todos los monitores o solo el monitor principal."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Interfiere con juegos o apps en pantalla completa?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Se pausa cuando una app en pantalla completa está en primer plano (salvo ventanas del shell), y la supresión de arrastre evita que se dispare mientras se mantiene pulsado un botón del ratón." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Se pausa cuando una app en pantalla completa está en primer plano (salvo ventanas del shell), y la supresión de arrastre evita que se dispare mientras se mantiene pulsado un botón del ratón."
+          }
         },
         {
           "@type": "Question",
           "name": "¿Cómo lo desinstalo?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Abre Configuración > Aplicaciones (o Panel de control) y desinstala Cream Corners. Opcionalmente borra la carpeta %APPDATA%\\CreamCorners para eliminar el archivo de configuración." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Abre Configuración > Aplicaciones (o Panel de control) y desinstala Cream Corners. Opcionalmente borra la carpeta %APPDATA%\\CreamCorners para eliminar el archivo de configuración."
+          }
         }
       ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://canopus44.github.io/cream-corners/#website",
+      "url": "https://canopus44.github.io/cream-corners/",
+      "name": "Cream Corners",
+      "inLanguage": [
+        "en",
+        "es"
+      ]
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://canopus44.github.io/cream-corners/#source",
+      "name": "cream-corners",
+      "codeRepository": "https://github.com/Canopus44/cream-corners",
+      "programmingLanguage": "Rust",
+      "license": "https://opensource.org/license/mit",
+      "runtimePlatform": "Windows 10, Windows 11"
     }
   ]
 }

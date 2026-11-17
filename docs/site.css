@@ -82,6 +82,7 @@ h1 { margin: 18px 0 16px; font-size: clamp(2.15rem, 4.6vw, 3.4rem); line-height:
 .byline a:hover { text-decoration: underline; }
 
 .note { margin: 16px 0 0; color: var(--ink-2); font-size: .84rem; }
+.note a { color: var(--accent-ink); }
 
 .hero-shot {
   width: 100%; max-width: 560px; justify-self: center;

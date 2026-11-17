@@ -57,6 +57,23 @@ pub fn run() {
                 let handle = app.handle().clone();
                 crate::engine::spawn(handle.clone(), engine.clone());
                 tray::init(&handle, engine.clone())?;
+
+                // Second launches signal this event so the window comes forward.
+                if let Some(event) = crate::win32::ShowEvent::create("Local\\CreamCornersShow") {
+                    let show_handle = handle.clone();
+                    let spawned = std::thread::Builder::new()
+                        .name("cream-corners-show".to_string())
+                        .spawn(move || loop {
+                            if !event.wait() {
+                                break;
+                            }
+                            tray::show_main(&show_handle);
+                        });
+                    if let Err(err) = spawned {
+                        eprintln!("show event: could not start thread: {err}");
+                    }
+                }
+
                 Ok(())
             }
         })

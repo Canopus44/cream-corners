@@ -40,6 +40,14 @@
     "publisher": "Cream Corners",
     "category": "Utility",
     "shortDescription": "Hot corners for Windows 10/11",
-    "longDescription": "Cream Corners watches the mouse and runs a configurable action when the pointer rests in a screen corner or edge, with per-zone dwell times, drag suppression, fullscreen pause and cooldown."
+    "longDescription": "Cream Corners watches the mouse and runs a configurable action when the pointer rests in a screen corner or edge, with per-zone dwell times, drag suppression, fullscreen pause and cooldown.",
+    "windows": {
+      "nsis": {
+        "installMode": "perMachine",
+        "installerIcon": "icons/icon.ico",
+        "languages": ["English", "Spanish"],
+        "displayLanguageSelector": false
+      }
+    }
   }
 }

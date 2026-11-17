@@ -1,3 +1,5 @@
+[English](../architecture.md) · [Español](arquitectura.md)
+
 # Arquitectura
 
 ## Vista general
@@ -36,7 +38,7 @@ Flujo de disparo: el hilo motor lee un snapshot de la configuración, consulta l
 
 | Módulo | Responsabilidad |
 |---|---|
-| `src-tauri/src/main.rs` | Arranque, mutex de instancia única, llamada al builder |
+| `src-tauri/src/main.rs` | Arranque, mutex de instancia única (`Local\CreamCornersSingleton`) y señal al evento `Local\CreamCornersShow` para traer al frente la ventana existente |
 | `src-tauri/src/lib.rs` | Builder de Tauri, estado, comandos IPC, cierre que oculta la ventana |
 | `src-tauri/src/settings.rs` | Modelo serde, defaults, saneado, persistencia atómica, autostart |
 | `src-tauri/src/win32.rs` | FFI Win32: cursor, monitores, fullscreen, `SendInput`/teclas, `ShellExecute` |

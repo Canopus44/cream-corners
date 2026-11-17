@@ -1,3 +1,5 @@
+[English](../troubleshooting.md) · [Español](solucion-de-problemas.md)
+
 # Solución de problemas
 
 ## 1. El build falla con `link.exe not found`
@@ -43,9 +45,9 @@
 
 ## 7. Aparece una segunda ventana o no abre nada
 
-**Causa probable**: ya hay una instancia activa. La app usa el mutex `Local\CreamCornersSingleton` y la segunda instancia termina.
+**Causa probable**: ya hay una instancia activa. La app usa el mutex `Local\CreamCornersSingleton` y la segunda instancia termina, pero antes envía la señal `Local\CreamCornersShow` para que la ventana existente venga al frente.
 
-**Solución**: busca el icono en la bandeja y usa "Abrir ajustes". Si no responde, ciérrala desde el Administrador de tareas y vuelve a iniciarla.
+**Solución**: si la ventana no aparece, busca el icono en la bandeja (tooltip "Cream Corners - clic para cambiar comandos") y usa "Cambiar comandos" en el menú. Si no responde, ciérrala desde el Administrador de tareas y vuelve a iniciarla.
 
 ## 8. Las zonas quedan desplazadas con varios monitores
 
@@ -53,12 +55,18 @@
 
 **Solución**: usa la misma escala en todos los monitores, o limita el alcance a `"monitorScope": "primary"` y configura las zonas en el monitor principal.
 
+## 9. "Acceso denegado" (os error 5) al ejecutar el exe desde Documentos
+
+**Causa probable**: en la máquina de desarrollo, ejecutar el binario desde una ruta bajo Documentos hace que el sistema deniegue la escritura de la configuración, aunque `%APPDATA%` sea escribible. Se observó con el exe release copiado a mano; las políticas locales o el antivirus corporativo pueden influir.
+
+**Solución**: instala con el instalador per-machine y ejecuta desde `C:\Program Files\Cream Corners\`, donde la escritura funciona con normalidad. Si necesitas usar el exe portable, cópialo a una carpeta fuera de Documentos.
+
 ## Logs
 
 No hay registro a archivo. Los mensajes de diagnóstico salen por `eprintln!` a la salida estándar de error:
 
 ```powershell
-& "$env:LOCALAPPDATA\CreamCorners\cream-corners.exe"
+& "$env:ProgramFiles\Cream Corners\cream-corners.exe"
 ```
 
-Ajusta la ruta al binario instalado (`%LOCALAPPDATA%\Programs\Cream Corners\` para una instalación por usuario, o `C:\Program Files\Cream Corners\`). Ejecutar desde PowerShell deja ver los errores que la UI reporta como `action-error`. En desarrollo, `npm run tauri dev` muestra esa salida en la misma consola.
+Ajusta la ruta al binario instalado: `C:\Program Files\Cream Corners\` con los instaladores per-machine, o `%LOCALAPPDATA%\Programs\Cream Corners\` si copiaste el exe a mano. Ejecutar desde PowerShell deja ver los errores que la UI reporta como `action-error`. En desarrollo, `npm run tauri dev` muestra esa salida en la misma consola.

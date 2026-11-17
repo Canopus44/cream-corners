@@ -34,6 +34,8 @@ const MONITOR_DEFAULTTONEAREST: u32 = 2;
 const ERROR_ALREADY_EXISTS: u32 = 183;
 const KEYEVENTF_KEYUP: u32 = 0x0002;
 const SW_SHOWNORMAL: i32 = 1;
+const EVENT_MODIFY_STATE: u32 = 0x0002;
+const INFINITE: u32 = 0xFFFF_FFFF;
 const VK_LBUTTON: i32 = 0x01;
 const VK_RBUTTON: i32 = 0x02;
 const VK_MBUTTON: i32 = 0x04;
@@ -72,6 +74,15 @@ extern "system" {
         show: i32,
     ) -> isize;
     fn CreateMutexW(attributes: *mut c_void, owner: i32, name: *const u16) -> isize;
+    fn CreateEventW(
+        attributes: *mut c_void,
+        manual_reset: i32,
+        initial_state: i32,
+        name: *const u16,
+    ) -> isize;
+    fn OpenEventW(access: u32, inherit: i32, name: *const u16) -> isize;
+    fn SetEvent(handle: isize) -> i32;
+    fn WaitForSingleObject(handle: isize, milliseconds: u32) -> u32;
     fn CloseHandle(handle: isize) -> i32;
     fn SetLastError(error: u32);
     fn GetLastError() -> u32;
@@ -269,5 +280,48 @@ pub fn acquire_singleton(name: &str) -> Option<InstanceGuard> {
             return None;
         }
         Some(InstanceGuard { handle })
+    }
+}
+
+/// Auto-reset event the running instance waits on to show its window.
+pub struct ShowEvent(isize);
+
+impl ShowEvent {
+    pub fn create(name: &str) -> Option<ShowEvent> {
+        let name = wide(name);
+        let handle = unsafe { CreateEventW(std::ptr::null_mut(), 0, 0, name.as_ptr()) };
+        if handle == 0 {
+            None
+        } else {
+            Some(ShowEvent(handle))
+        }
+    }
+
+    pub fn wait(&self) -> bool {
+        unsafe { WaitForSingleObject(self.0, INFINITE) == 0 }
+    }
+}
+
+impl Drop for ShowEvent {
+    fn drop(&mut self) {
+        if self.0 != 0 {
+            unsafe {
+                CloseHandle(self.0);
+            }
+        }
+    }
+}
+
+/// Best effort: ask an already-running instance to show its window.
+pub fn signal_running_instance(name: &str) -> bool {
+    let name = wide(name);
+    unsafe {
+        let handle = OpenEventW(EVENT_MODIFY_STATE, 0, name.as_ptr());
+        if handle == 0 {
+            return false;
+        }
+        let signaled = SetEvent(handle) != 0;
+        CloseHandle(handle);
+        signaled
     }
 }

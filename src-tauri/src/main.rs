@@ -3,7 +3,10 @@
 fn main() {
     let _instance = match cream_corners_lib::win32::acquire_singleton("Local\\CreamCornersSingleton") {
         Some(guard) => guard,
-        None => std::process::exit(0),
+        None => {
+            cream_corners_lib::win32::signal_running_instance("Local\\CreamCornersShow");
+            std::process::exit(0)
+        }
     };
 
     cream_corners_lib::run();

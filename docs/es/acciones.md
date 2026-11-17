@@ -1,6 +1,10 @@
+[English](../actions.md) · [Español](acciones.md)
+
 # Acciones
 
 Una zona ejecuta exactamente una acción. Hay tres clases: preset, comando externo y URL. `none` desactiva el efecto aunque la zona esté activada.
+
+<img src="../images/actions.png" width="720" alt="Selector de acciones de una zona en Cream Corners">
 
 ## Presets
 

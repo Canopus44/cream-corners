@@ -20,7 +20,7 @@ pub fn init(app: &AppHandle, engine: Arc<Engine>) -> tauri::Result<()> {
     };
 
     let toggle = CheckMenuItem::with_id(app, "toggle", "Activo", true, enabled, None::<&str>)?;
-    let open = MenuItem::with_id(app, "open", "Abrir ajustes", true, None::<&str>)?;
+    let open = MenuItem::with_id(app, "open", "Cambiar comandos", true, None::<&str>)?;
     let separator = PredefinedMenuItem::separator(app)?;
     let quit = MenuItem::with_id(app, "quit", "Salir", true, None::<&str>)?;
     let menu = Menu::with_items(app, &[&toggle, &open, &separator, &quit])?;
@@ -30,7 +30,7 @@ pub fn init(app: &AppHandle, engine: Arc<Engine>) -> tauri::Result<()> {
     });
 
     let mut builder = TrayIconBuilder::with_id("main-tray")
-        .tooltip("Cream Corners")
+        .tooltip("Cream Corners - clic para cambiar comandos")
         .menu(&menu)
         .show_menu_on_left_click(false);
     if let Some(icon) = app.default_window_icon() {
@@ -77,15 +77,17 @@ pub fn init(app: &AppHandle, engine: Arc<Engine>) -> tauri::Result<()> {
                 _ => {}
             }
         })
-        .on_tray_icon_event(|tray, event| {
-            if let TrayIconEvent::Click {
+        .on_tray_icon_event(|tray, event| match event {
+            TrayIconEvent::Click {
                 button: MouseButton::Left,
                 button_state: MouseButtonState::Up,
                 ..
-            } = event
-            {
-                show_main(tray.app_handle());
             }
+            | TrayIconEvent::DoubleClick {
+                button: MouseButton::Left,
+                ..
+            } => show_main(tray.app_handle()),
+            _ => {}
         })
         .build(app)?;
     let _ = app.manage(TrayRuntime(tray));
@@ -93,7 +95,7 @@ pub fn init(app: &AppHandle, engine: Arc<Engine>) -> tauri::Result<()> {
     Ok(())
 }
 
-fn show_main(app: &AppHandle) {
+pub fn show_main(app: &AppHandle) {
     if let Some(window) = app.get_webview_window("main") {
         if let Err(err) = window.show() {
             eprintln!("tray: could not show window: {err}");

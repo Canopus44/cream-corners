@@ -1,3 +1,5 @@
+[English](../configuration.md) · [Español](configuracion.md)
+
 # Configuración
 
 ## Archivos
